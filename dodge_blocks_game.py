@@ -54,6 +54,7 @@ win_font=pygame.font.SysFont("Arial", 50)
 # Sounds
 collision_sound = pygame.mixer.Sound(r"C:\Users\omrad\OneDrive\Desktop\Dodge Blocks Game\collison_sound.wav")
 background_sound = pygame.mixer.Sound(r"C:\Users\omrad\OneDrive\Desktop\Dodge Blocks Game\background_sound.wav.mp3")
+victory_sound=pygame.mixer.Sound(r"C:\Users\omrad\OneDrive\Desktop\Dodge Blocks Game\Victory sound effect (pixabay).wav")
 
 # Play the background sound infinitly
 background_sound.play(loops=-1)
@@ -141,6 +142,7 @@ if game_over:
 
 elif you_win:
     display.fill(white)
+    victory_sound.play()
     text = win_font.render("Congratulations! You Survived!", True, green)
     display.blit(text, (30, 200))
     pygame.display.flip()
